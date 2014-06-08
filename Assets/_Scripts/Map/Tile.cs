@@ -26,12 +26,12 @@ public class Tile : MonoBehaviour {
 	// Initialization
 	public void SetResource(Resource newResource){
 		resource = newResource;
-		// Show
+		// Update models
 		resourceModel.sprite = resource.MapIcon;
 		resourceModel.color = resource.MapIconColor;
 	}
 
-	// Simple building and destoying mechanis. TODO
+	// Simple building and destoying mechanism. TODO
 	void OnMouseDown(){
 		// If there is no building and player has money
 		if ((buildingPrefab != null) && (building == null) && (GameObject.FindObjectOfType<Player>().money >= buildingPrefab.price)){
